@@ -1,4 +1,3 @@
-
 <?php 
 include_once "../base.php";
 $row=$Movie->find($_POST['id']);
@@ -21,6 +20,7 @@ $_POST['ondate']=$_POST['year']."-".$_POST['month']."-".$_POST['day'];
 unset($_POST['year'],$_POST['month'],$_POST['day']);
 $_POST['sh']=$row['sh'];
 $_POST['rank']=$row['rank'];
+
 
 $Movie->save($_POST);
 

@@ -2,10 +2,6 @@
 
 include_once "../base.php";
 
-$table=$_POST['table'];
-$DB=new DB($table);
+$DB=new DB($_POST['table']);
 $DB->del($_POST['id']);
-
-// 縮減成2行
-// $DB=new ($_POST['table']);
-// $DB->del($_POST['id']);
+//(new DB($_POST['table']))->del($_POST['id']);
